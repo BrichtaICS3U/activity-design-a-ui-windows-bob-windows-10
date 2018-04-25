@@ -8,11 +8,14 @@ pygame.init()
 
 # Define some colours
 # Colours are defined using RGB values
-BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
-GREEN = (0, 200, 0)
-BRIGHT_GREEN = (0, 255, 0)
-RED = (200, 0, 0)
+GRAY = (127, 127, 127)
+BLACK = (0, 0, 0)
+JAM = (164, 14, 76)
+BLUE = (117, 221, 221)
+PURPLE = (86, 71, 135)
+GREEN = (127, 178, 133)
+ORANGE = (255, 34, 12)
 
 # Open a new window
 # The window is defined as (width, height), measured in pixels
@@ -55,7 +58,7 @@ while carryOn:
     # --- Draw code goes here
 
     # Clear the screen to white
-    screen.fill(WHITE)
+    screen.fill(PURPLE)
 
     # Queue shapes to be drawn
     
@@ -63,15 +66,15 @@ while carryOn:
 
     # Green button
     if SCREENWIDTH/3-50 < mouse[0] < SCREENWIDTH/3+50 and SCREENHEIGHT/2 < mouse[1] < SCREENHEIGHT/2 + 50 and click[0] == 1:
-        pygame.draw.rect(screen, RED, (SCREENWIDTH/3-50, SCREENHEIGHT/2, 100, 50))
+        pygame.draw.rect(screen, GRAY, (SCREENWIDTH/3-50, SCREENHEIGHT/2, 100, 50))
         print('You pressed the button! You maniac!')
     elif SCREENWIDTH/3-50 < mouse[0] < SCREENWIDTH/3+50 and SCREENHEIGHT/2 < mouse[1] < SCREENHEIGHT/2 + 50:
-        pygame.draw.rect(screen, BRIGHT_GREEN, (SCREENWIDTH/3-50, SCREENHEIGHT/2, 100, 50))
+        pygame.draw.rect(screen, GRAY, (SCREENWIDTH/3-50, SCREENHEIGHT/2, 100, 50))
     else:
         pygame.draw.rect(screen, GREEN, (SCREENWIDTH/3-50, SCREENHEIGHT/2, 100, 50))
 
     # Red button
-    pygame.draw.rect(screen, RED, (SCREENWIDTH*2/3-50, SCREENHEIGHT/2, 100, 50))
+    pygame.draw.rect(screen, ORANGE, (SCREENWIDTH*2/3-50, SCREENHEIGHT/2, 100, 50))
 
     # Text
     screen.blit(textSurfaceTitle, textRectTitle)

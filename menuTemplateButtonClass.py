@@ -8,11 +8,14 @@ pygame.init()
 WHITE = (255, 255, 255)
 GRAY = (127, 127, 127)
 BLACK = (0, 0, 0)
-RED = (255, 0, 0)
-BLUE = (0, 0, 255)
+JAM = (164, 14, 76)
+BLUE = (117, 221, 221)
+PURPLE = (86, 71, 135)
+GREEN = (127, 178, 133)
+ORANGE = (255, 34, 12)
 
-SCREENWIDTH = 120
-SCREENHEIGHT = 100
+SCREENWIDTH = 600
+SCREENHEIGHT = 400
 size = (SCREENWIDTH, SCREENHEIGHT)
 screen = pygame.display.set_mode(size)
 
@@ -98,9 +101,9 @@ carryOn = True
 clock = pygame.time.Clock()
 
 #create button objects
-button_01 = Button("Next", (SCREENWIDTH/2, SCREENHEIGHT/3), my_next_function)
+button_01 = Button("Next", (SCREENWIDTH/2, SCREENHEIGHT/3), my_next_function, bg= ORANGE)
 button_02 = Button("Previous", (SCREENWIDTH/2, SCREENHEIGHT/3), my_previous_function)
-button_03 = Button("Quit", (SCREENWIDTH/2, SCREENHEIGHT*2/3), my_quit_function, bg=(50, 200, 20))
+button_03 = Button("Quit", (SCREENWIDTH/2, SCREENHEIGHT*2/3), my_quit_function, bg= GREEN)
 
 #arrange button groups depending on level
 level1_buttons = [button_01, button_03]
@@ -120,7 +123,7 @@ while carryOn:
     # --- Draw code goes here
 
     # Clear the screen to white
-    screen.fill(WHITE)
+    screen.fill(PURPLE)
 
     # Draw buttons
     if level == 1:
