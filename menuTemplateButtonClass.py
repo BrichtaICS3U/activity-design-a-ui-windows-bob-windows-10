@@ -3,7 +3,7 @@
 
 import pygame, sys
 pygame.init()
-
+background = pygame.image.load("penguinlit.png")
 # Define some colours
 WHITE = (255, 255, 255)
 GRAY = (127, 127, 127)
@@ -14,8 +14,8 @@ PURPLE = (86, 71, 135)
 GREEN = (127, 178, 133)
 ORANGE = (255, 34, 12)
 
-SCREENWIDTH = 600
-SCREENHEIGHT = 400
+SCREENWIDTH = 500
+SCREENHEIGHT = 350
 size = (SCREENWIDTH, SCREENHEIGHT)
 screen = pygame.display.set_mode(size)
 
@@ -124,7 +124,7 @@ while carryOn:
 
     # Clear the screen to white
     screen.fill(PURPLE)
-
+    screen.blit(background, (0, 0))
     # Draw buttons
     if level == 1:
         for button in level1_buttons:
