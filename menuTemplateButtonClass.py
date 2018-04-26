@@ -101,13 +101,13 @@ carryOn = True
 clock = pygame.time.Clock()
 
 #create button objects
-button_01 = Button("Next", (SCREENWIDTH/2, SCREENHEIGHT/3), my_next_function, bg= ORANGE)
-button_02 = Button("Previous", (SCREENWIDTH/2, SCREENHEIGHT/3), my_previous_function)
-button_03 = Button("Quit", (SCREENWIDTH/2, SCREENHEIGHT*2/3), my_quit_function, bg= GREEN)
+button_next = Button("Next", (SCREENWIDTH/2, SCREENHEIGHT/3), my_next_function, bg= ORANGE)
+button_previous = Button("Previous", (SCREENWIDTH/2, SCREENHEIGHT/3), my_previous_function)
+button_quit = Button("Quit", (SCREENWIDTH/2, SCREENHEIGHT*2/3), my_quit_function, bg= GREEN)
 
 #arrange button groups depending on level
-level1_buttons = [button_01, button_03]
-level2_buttons = [button_02, button_03]
+level1_buttons = [button_next, button_quit]
+level2_buttons = [button_previous, button_quit]
 
 #---------Main Program Loop----------
 while carryOn:
